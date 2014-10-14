@@ -1,0 +1,83 @@
+.rounded-bottom {
+  -webkit-border-bottom-left-radius: 3px;
+  -webkit-border-bottom-right-radius: 3px;
+  -moz-border-radius-bottomleft: 3px;
+  -moz-border-radius-bottomright: 3px;
+  border-bottom-left-radius: 3px;
+  border-bottom-right-radius: 3px;
+}
+.rounded-top {
+  -webkit-border-top-left-radius: 3px;
+  -webkit-border-top-right-radius: 3px;
+  -moz-border-radius-topleft: 3px;
+  -moz-border-radius-topright: 3px;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+}
+.align-left {
+  text-align: left;
+}
+.align-right {
+  text-align: right;
+}
+.cards {
+  background: url('/img/layouts/squairy_light.png');
+}
+.cards .title {
+  font-weight: bold;
+}
+.cards .full-name {
+  color: #333;
+  font-size: 32px;
+  font-weight: bold;
+}
+.cards .time-span {
+  color: #999;
+  font-weight: bold;
+}
+.cards a {
+  color: #4c708c;
+}
+.cards a:visited {
+  color: #4c708c;
+}
+.cards a:hover {
+  color: #5b6c78;
+}
+.cards span.glyphicon {
+  margin-right: 5px;
+}
+.card {
+  background-color: #FFFFFF;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-right: 4px;
+  margin-left: 4px;
+  padding: 0px 20px 20px 20px;
+}
+.card h2.section-header {
+  color: #FFF;
+  font-size: 18px;
+  background-color: #333;
+  display: inline-block;
+  padding: 8px 20px;
+  margin-left: -20px;
+  margin-top: 0px;
+}
+.card ul {
+  margin-bottom: 10px;
+}
+.card ul li {
+  padding-left: 10px;
+}
+.card ul .contact-info {
+  font-size: 18px;
+}
+header.card {
+  margin-top: 0px;
+  padding-top: 10px;
+}
+.card.last {
+  margin-bottom: 0px;
+  padding-bottom: 10px;
+}

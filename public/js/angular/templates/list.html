@@ -1,0 +1,13 @@
+<section class="result-container" ng-show="result.success" ng-repeat="(key, row) in result | orderBy: orderProp" data-id="@{{row.id}}">
+    <div class="result-list row" ng-show="row.labels.medium">
+        <div class="col-sm-3 col-md-5 img-container">
+            <img ng-src="@{{row.labels.medium}}">
+        </div>
+        <div class="col-xs-12 col-sm-9 col-md-7">
+            <h2><a ng-click="onBeerSelect(row)">@{{row.name}}</a></h2>
+            <span>@{{row.style.name}}</span>
+            <span ng-show="row.abv">@{{row.abv}}% ABV</span>
+            <p>@{{row.description}}</p>
+        </div>
+    </div>
+</section>

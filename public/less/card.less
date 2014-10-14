@@ -1,0 +1,78 @@
+@import "./mixins.less";
+// Card styles - using this on resume page
+.cards {
+    background: url('/img/layouts/squairy_light.png');
+
+    // Titles of things
+    .title {
+        font-weight: bold;
+    }
+    .full-name {
+        color: #333;
+        font-size: 32px;
+        font-weight: bold;
+    }
+    .time-span {
+        color: #999;
+        font-weight: bold;
+    }
+    a {
+        color: @color-teal;
+    }
+    a:visited {
+        color: @color-teal;
+    }
+    a:hover {
+        color: @color-grey-blue;
+    }
+
+    span.glyphicon {
+        margin-right: 5px;
+    }
+
+}
+
+// Stying for the individual cards
+.card {
+    background-color: #FFFFFF;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-right: 4px;
+    margin-left: 4px;
+    padding: 0px 20px 20px 20px;
+
+    // Use for section headings
+    h2.section-header {
+        color: #FFF;
+        font-size: 18px;
+        background-color: #333;
+        display: inline-block;
+        padding: 8px 20px;
+        margin-left: -20px;
+        margin-top: 0px;
+    }
+
+    ul {
+        margin-bottom: 10px;
+
+        li {
+            padding-left: 10px;
+        }
+        .contact-info {
+            font-size: 18px;
+        }
+    }
+}
+
+// First card
+header.card {
+    margin-top: 0px;
+    padding-top: 10px;
+}
+
+// Last card
+.card.last {
+    margin-bottom: 0px;
+    padding-bottom: 10px;
+}
+

@@ -1,0 +1,641 @@
+@import url(http://fonts.googleapis.com/css?family=Open+Sans);
+.rounded-bottom {
+  -webkit-border-bottom-left-radius: 3px;
+  -webkit-border-bottom-right-radius: 3px;
+  -moz-border-radius-bottomleft: 3px;
+  -moz-border-radius-bottomright: 3px;
+  border-bottom-left-radius: 3px;
+  border-bottom-right-radius: 3px;
+}
+.rounded-top {
+  -webkit-border-top-left-radius: 3px;
+  -webkit-border-top-right-radius: 3px;
+  -moz-border-radius-topleft: 3px;
+  -moz-border-radius-topright: 3px;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+}
+.align-left {
+  text-align: left;
+}
+.align-right {
+  text-align: right;
+}
+/* Reset */
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+/* 
+Allow our elements to have the padding and border cut into the width - this
+css relies on that constant, so its applied to everything.
+*/
+*,
+*:after,
+*:before {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.login-page {
+  background-color: #eee;
+}
+body {
+  font-family: "Open Sans", "Helvetica Neue", Helvetica, arial, sans-serif !important;
+  color: #444;
+  -webkit-font-smoothing: antialiased;
+  font-size: 14px;
+  line-height: 1.428571429;
+  color: #27394a;
+}
+body.bgdark {
+  background-color: #27394a;
+}
+.error {
+  color: red;
+}
+.success {
+  color: green;
+}
+.popover-content {
+  font-size: 14px;
+  font-weight: 400;
+}
+/* Headers */
+h1 {
+  margin: 0.67em 0;
+  font-size: 2em;
+}
+h1,
+h2,
+h3 h4,
+h5,
+h6 {
+  font-family: "Open Sans", "Helvetica Neue", Helvetica, arial, sans-serif;
+  color: #444;
+  -webkit-font-smoothing: antialiased;
+  font-weight: 500;
+  line-height: 1.1;
+  color: inherit;
+  margin-bottom: 10px;
+}
+h1 {
+  font-size: 36px;
+}
+h2 {
+  font-size: 24px;
+}
+h3 {
+  font-size: 18px;
+}
+.container-960 {
+  width: 960px;
+  margin: 0 auto;
+  background-color: #FFF;
+}
+.debug {
+  font-family: Consolas, monospace;
+}
+.beer-header {
+  padding-top: 30px;
+  padding-bottom: 60px;
+  font-size: 24px;
+  text-align: left;
+  /*background-color: lighten(@color-grey-blue, 30%);*/
+
+  background-image: url("/img/bg-beer-black-1600x250.jpg");
+}
+.beer-header h1 {
+  font-size: 60px;
+  line-height: 1;
+  color: #e2d6aa;
+}
+.beer-header p {
+  color: aliceblue;
+}
+.content-box {
+  border: 1px solid #FFF;
+  border-radius: 4px;
+  padding: 20px;
+  background-color: #EEE;
+}
+.content-box-nobg {
+  border: 1px solid #FFF;
+  border-radius: 4px;
+  padding: 20px;
+}
+/* Forms - Using bootstrap3 right now */
+/* Login form modification */
+.form-login {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 330px;
+  margin-top: 15px;
+}
+/*.form-group {
+  margin-bottom: 15px;
+}
+.form-control {
+    display: block;
+    font-size: 14px;
+    line-height: 1.428571429;
+
+    input {
+        border-radius: 2px;
+        width: 100%;
+        border: 1px solid #DDD; 
+        height: 30px;
+        margin-bottom: 10px;
+        font-size: 14px;
+    }
+
+    fieldset {
+        border: 1px solid @color-grey-blue;
+        padding: 5px;
+    }
+}*/
+/* 
+ nav bar defaults */
+nav {
+  height: 40px;
+  width: 100%;
+  background: #292e39;
+  font-size: 11pt;
+  font-weight: bold;
+  position: relative;
+  border-bottom: 2px solid #314f64;
+}
+nav a {
+  color: #e2d6aa;
+  display: inline-block;
+  width: 100px;
+  text-align: center;
+  text-decoration: none;
+  line-height: 40px;
+}
+nav ul {
+  padding: 0;
+  margin: 0 auto;
+  width: 100%;
+  height: 40px;
+}
+nav ul li {
+  display: inline;
+  float: left;
+}
+nav ul li a {
+  border-right: none;
+}
+nav ul li a :last-child {
+  border-right: none;
+}
+/* This is our pull menu */
+nav a#pull {
+  display: none;
+}
+/* State changes to nav */
+nav a:hover,
+nav a:active {
+  background-color: #27394a;
+  color: #ffd640;
+  text-decoration: none;
+}
+footer {
+  padding: 10px 15px;
+  background-color: #292e39;
+  border-top: 1px solid #8a8681;
+  height: 100px;
+}
+footer p {
+  color: #e2d6aa;
+}
+/* Grid - max of 12 columns */
+/* Grouping of columns for the grid - splits up the page horizontally
+and breaks up the content */
+.row {
+  clear: both;
+  padding: 0px;
+}
+/* Specify this is a column - I opted for padding instead of margins and negative margins */
+.col {
+  display: block;
+  float: left;
+  padding: 10px;
+}
+/* Clearfix hack - why do we do this? */
+.group:before,
+.group:after {
+  content: " ";
+  display: table;
+}
+.group:after {
+  clear: both;
+}
+/* span width definition */
+.span12 {
+  width: 100%;
+}
+.span11 {
+  width: 91.666666666%;
+}
+.span10 {
+  width: 83.333333333%;
+}
+.span9 {
+  width: 75%;
+}
+.span8 {
+  width: 66.666666666%;
+}
+.span7 {
+  width: 58.333333333%;
+}
+.span6 {
+  width: 50%;
+}
+.span5 {
+  width: 41.66666666%;
+}
+.span4 {
+  width: 33.33333333%;
+}
+.span3 {
+  width: 25%;
+}
+.span2 {
+  width: 16.666666666%;
+}
+.span1 {
+  width: 8.333333333%;
+}
+/* media queries for the grid */
+@media only screen and (max-width: 480px) {
+  .col {
+    margin: 1% 0 1% 0%;
+  }
+}
+/* Media queries */
+@media only screen and (max-width: 480px) {
+  .span12 {
+    width: 100%;
+  }
+  .span11 {
+    width: 100%;
+  }
+  .span10 {
+    width: 100%;
+  }
+  .span9 {
+    width: 100%;
+  }
+  .span8 {
+    width: 100%;
+  }
+  .span7 {
+    width: 100%;
+  }
+  .span6 {
+    width: 100%;
+  }
+  .span5 {
+    width: 100%;
+  }
+  .span4 {
+    width: 100%;
+  }
+  .span3 {
+    width: 100%;
+  }
+  .span2 {
+    width: 100%;
+  }
+  .span1 {
+    width: 100%;
+  }
+}
+@media (min-width: 769px) and (max-width: 1040px) {
+  .container {
+    width: 740px;
+  }
+  .container nav ul li a {
+    border-right: none;
+  }
+}
+@media (min-width: 361px) and (max-width: 768px) {
+  .container {
+    width: 466px;
+  }
+  /* Nav for smaller screen */
+  nav {
+    height: auto;
+  }
+  nav ul {
+    width: 100%;
+    display: block;
+    height: auto;
+  }
+  nav li {
+    width: 100%;
+    float: left;
+    position: relative;
+    /* Hide the borders */
+  
+  }
+  nav li a {
+    border-bottom: 1px solid #000;
+    border-right: none;
+  }
+  nav a {
+    text-align: left;
+    width: 100%;
+    text-indent: 25px;
+    border-rigth: none;
+  }
+  #site-title {
+    display: none;
+  }
+  .beer-header {
+    background-image: none;
+    background-color: black;
+  }
+}
+@media (max-width: 360px) {
+  .container {
+    width: 320px;
+  }
+  /* Mobile nav */
+  nav ul {
+    display: none;
+    height: auto;
+  }
+  nav a#pull {
+    display: block;
+    background-color: #27394a;
+    width: 100%;
+    position: relative;
+  }
+  nav a#pull:after {
+    content: "";
+    width: 30px;
+    height: 30px;
+    display: inline-block;
+    position: absolute;
+    right: 15px;
+    top: 10px;
+  }
+  nav li {
+    display: block;
+    float: none;
+    width: 100%;
+  }
+  nav li a {
+    background-color: #27394a;
+    width: 100%;
+    border-right: none;
+  }
+  #site-title {
+    display: none;
+  }
+}
+/* tools */
+/* Buttons - borrowed from bootstrap 3 because I liked them!
+* http://getbootstrap.com/css/#buttons
+*/
+.btn {
+  display: inline-block;
+  padding: 6px 12px;
+  margin-bottom: 0;
+  margin-left: 0;
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 1.428571429;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  cursor: pointer;
+  background-image: none;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+}
+.btn:focus {
+  outline: thin dotted #333;
+  outline: 5px auto -webkit-focus-ring-color;
+  outline-offset: -2px;
+}
+.btn:hover,
+.btn:focus {
+  color: #333333;
+  text-decoration: none;
+}
+.btn:active,
+.btn.active {
+  background-image: none;
+  outline: 0;
+  -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+  box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+}
+.btn-default {
+  color: #333333;
+  background-color: #ffffff;
+  border-color: #cccccc;
+}
+.btn-default:hover,
+.btn-default:focus,
+.btn-default:active,
+.btn-default.active,
+.open .dropdown-toggle.btn-default {
+  color: #333333;
+  background-color: #ebebeb;
+  border-color: #adadad;
+}
+.btn-default:active,
+.btn-default.active,
+.open .dropdown-toggle.btn-default {
+  background-image: none;
+}
+/* Clearfix hack */
+.clearfix:before,
+.clearfix:after {
+  content: " ";
+  display: table;
+}
+.clearfix:after {
+  clear: both;
+}
+.clearfix {
+  *zoom: 1;
+}
+/* Utils */
+.no-border-right {
+  border-right: none !important;
+}
+.border-right {
+  border-right: 1px solid #AAA;
+}
+.border-left {
+  border-right: 1px solid #AAA;
+}
+.padding-right {
+  padding-right: 10px;
+}
+.padding-left {
+  padding-left: 10px;
+}
+.margin-right {
+  margin-right: 10px;
+}
+.margin-left {
+  margin-left: 10px;
+}
+.mahogany {
+  color: #543436;
+}
+.carousel {
+  height: 500px;
+  margin-bottom: 60px;
+}
+/* Since positioning the image, we need to help out the caption */
+.carousel-caption {
+  z-index: 10;
+}
+/* Declare heights because of positioning of img element */
+.carousel .item {
+  width: 100%;
+  height: 500px;
+  background-color: #777;
+}
+.carousel-inner > .item > img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  height: 500px;
+}
+.carousel-inner .item a img {
+  padding: 0px 8%;
+}

@@ -1,0 +1,43 @@
+/* CSS specific for /beer */
+@import "../mixins.less";
+
+// Resets
+label {
+    font-weight: normal;
+}
+
+// Result containers of search
+.result-list {
+    border-radius: 4px;
+    border: 1px solid #CCC;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+
+    h2 {
+        color: #333;
+    }
+
+    img {
+        opacity: .4;
+    }
+
+    span {
+        display: inline-block;
+        font-size: 24px;
+        color: @color-teal;
+    }
+}
+
+.img-container {
+    overflow: hidden;
+    padding-top: 20px;
+}
+
+// Media queries
+@media (max-width: 360px) {
+    /* remove the image container */
+    .img-container {
+        display: none;
+    }
+}
+

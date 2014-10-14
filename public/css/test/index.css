@@ -1,0 +1,466 @@
+/* Importing a font thats close to Myriad Pro */
+@import url(http://fonts.googleapis.com/css?family=Noto+Sans);
+
+/* color palet for reference
+#617A9F - light blue
+#566B8C - dark blue
+#507AA5 - blue nav (use for text also)
+#466A90 - darker blue nav
+#F6F6F6 - grey background
+#DFDFDF - borders
+#CCCCCC - tabbed box background
+#BBBBBB - inactive tab
+#FAFAFA - search box interior color
+*/
+
+/* reset the lists */
+li {
+  list-style: none;
+  padding: 0px;
+}
+ul {
+  padding: 0px;
+  margin: 0px;
+}
+
+/* restyling our input boxes - remove the glow too */
+input[type="text"] {
+  padding: none;
+  border: 1px solid #DFDFDF;
+  color: black;
+  outline: none;
+}
+
+/* Link Styling */
+a {
+  text-decoration: none;
+}
+a:link {color: #5A7A9B;}
+a:visited {color: #5A7A9B;}
+a:hover {color: #466A90;}
+a:active {color: #466A90;}
+
+/* restyle our buttons */
+.btn::-moz-focus-inner {
+    border:0;
+    padding:0
+  }
+.btn {
+  width:auto;
+  border:0 none;
+  margin:0;
+  padding:0;
+  background:transparent;
+  overflow:visible;
+  /* Stupid IE */
+  font:14px arial, sans-serif;
+}
+
+/* Right hand attached button */
+.btn-right {
+  position: relative;
+  bottom: 1px;
+  padding: 0 7px 0 7px;
+  height: 30px;
+  margin-left: -5px;
+  border-radius: 0 4px 4px 0;
+  font-size: 10px;
+  background-color: #466A90;
+  vertical-align: middle;
+  width: 70px;
+  color: #FFF;
+}
+
+/* Changing the placeholder attributes color */
+::-webkit-input-placeholder {
+    color: #555;
+}
+:-moz-placeholder {
+    color: #555;
+}
+::-moz-placeholder {
+    color: #555;
+}
+:-ms-input-placeholder {
+    color: #555;
+}
+
+/* I'm applying border box to cut into the width of all the elements, and
+its IE8 supported */
+*, *:after, *:before {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* Utils */
+.border {
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+}
+
+.inline {
+  display: inline;
+  margin: 0px;
+}
+
+.small-font {
+  font-size: 10px;
+  font-weight: 100;
+}
+
+.pull-right {
+  float: right;
+}
+
+.pull-left {
+  float: left;
+}
+
+.deemphasized-text {
+  color: #CCC;
+}
+
+img  {
+  max-width: 100%;
+  height: auto !important;
+}
+
+.img-box {
+  position: relative;
+  border: 1px solid #DFDFDF;
+  padding: 6px;
+  margin-right: 20px;
+  width: 142px;
+}
+
+/* In IE8 this won't work on elements that are block by default (ie; div);
+  I'm using a span here for that reason since its native inline.
+*/
+.img-box span {
+  position: absolute;
+  width: 128px;
+  height: 25px;
+  bottom: 6px;
+  display: inline-block;
+  background-color: #5A7A9B;
+  text-align: center;
+  color: #FFF;
+  font-size: 12px;
+  padding: 3px;
+}
+
+/* Icons */
+/* Added the IE and old moz fix */
+/* TODO add the sprite or make a new one */
+.down-arrow, .right-arrow{
+  background: url('/img/sprite2.png') no-repeat;
+  display: inline-block;
+  margin: 0 2px 0 2px;
+  display:-moz-inline-stack;
+  zoom:1;
+  *display:inline;
+}
+
+.down-arrow{
+  background-position: -13px 0;
+  width: 7px;
+  height: 8px;
+}
+
+.right-arrow{
+  background-position: 0 0;
+  width: 9px;
+  height: 8px;
+}
+
+/* Define our fonts and such */
+body {
+  font-family: 'Noto Sans', sans-serif;
+  font-size: 12px;
+  line-height: 1.428571429;
+  background-color: #F6F6F6;
+  color: #555;
+}
+
+header {
+  border-bottom: 1px solid #F6F6F6;
+}
+
+/* Nav stying - This is coupled too heavily to HTML.  Consider using classes for decoupling purposes */
+nav#nav {
+  padding: 6px 0 24px 0;
+}
+
+nav .nav-menu {
+  position: relative; /* for absolutely positioned sub-navs */
+  display: inline-table;
+  margin-top: 6px;
+}
+
+nav .nav-menu > li {
+  padding: 4px 8px 4px 8px;
+}
+
+nav .nav-menu:after {
+  content: ""; clear: both;
+  display: block;
+}
+
+nav .nav-sub-menu {
+  position: absolute;
+  top: 100%;
+  display: none;
+  background-color: #617A9F;
+  margin-top: 0px;
+  margin-left: -8px;
+  border-radius: 0 4px 4px 4px;
+}
+
+/* floats and pads all ul li elements in the nav */
+nav ul li  {
+  float: left;
+}
+
+/* dropdown styling */
+nav ul li:hover {
+  border-radius: 4px 4px 0 0;
+  background-color: #617A9F;
+  color: #FFF;
+}
+
+nav ul li:hover a {
+  color: #FFF;
+}
+
+/* The direct child of our ul */
+nav ul li:hover > ul {
+  display: block;
+}
+
+nav ul li a {
+  display: block;
+  color: #566B8C;
+  text-decoration: none;
+  padding: 4px 8px 4px 8px;
+}
+
+/* I changed the fonts here because Noto Sans doesn't have a low
+  weight that I needed to make this closer to the mock up
+*/
+nav ul ul li {
+  float: none; 
+  position: relative;
+  font-family: "Helvetica Neue", Helvetica, arial, sans-serif;
+  font-weight: 100;
+  letter-spacing: 1px;
+  font-size: 11px;
+}
+
+nav ul ul li a {
+  color: #fff;
+}
+
+nav ul ul li a:hover {
+  background: #566B8C;
+}
+
+nav ul ul ul {
+  position: absolute;
+  left: 100%;
+  top:0;
+}
+/* Tab widget */
+
+/* tab box */
+.tabs {
+  position: relative;
+  padding: 6px;
+  margin-bottom: 20px;
+  background-color: #CCC;
+}
+
+/* tab menu */
+.tabs-menu li {
+  float: left;
+  margin-right: 4px;
+  padding: 4px;
+  background-color: #BBBBBB;
+  -webkit-border-radius: 4px 4px 0 0;
+  -moz-border-radius: 4px 4px 0 0;
+  border-radius: 4px 4px 0 0;
+}
+
+.tabs-menu a {
+  color: inherit;
+}
+
+.tabs .tabs-content {
+
+}
+
+.tabs .tabs-panel {
+  border: 1px solid red;
+  border-width: 0;
+  padding: 8px;
+  background: none;
+  display: none;
+  background-color: #FFF;
+  border-radius: 0 4px 4px 4px;
+  -moz-border-radius: 0 4px 4px 4px;
+  -webkit-border-radius: 0 4px 4px 4px;
+}
+
+/* First child should be visible when the page loads */
+.tabs .tabs-content :first-child {
+  display: block;
+}
+
+/* Our active css tab */
+.tabs .active {
+  background-color: #FFF;
+  display: block;
+}
+
+/* Styling for content in the tabbed box 
+  I didn't want to use !important, but the class above
+  using :first-child pseudo selector is very specific
+*/
+.secondary-content-list li a {
+  display: inline-block !important;
+}
+.secondary-content-list li {
+  border-bottom: 1px dotted #DFDFDF;
+}
+
+/* styling for the social box (rss, twitter, google etc) */
+.social-list li {
+  padding: 6px 6px 6px 20px;
+}
+
+.article-list li {
+  padding: 5px;
+}
+
+/* for the extra padding version */
+.secondary-content-list.indented {
+  padding-left: 20px;
+}
+
+/* Input button groups */
+.input-group {
+  border-collapse: separate;
+  margin-top: 4px;
+}
+.input-group input.search-box {
+  height: 30px;
+  width: 200px;
+  background-color: #F6F6F6;
+  padding-left: 4px;
+  border-radius: 4px 0 0 4px;
+  -moz-border-radius: 4px 0 0 4px;
+  -webkit-border-radius: 4px 0 0 4px;
+  margin-top: 6px;
+}
+
+/* Tabbed boxes - REWRITE */
+
+
+/* Simple grid for rows and columns */
+/* 1040 content area with 30px padding on all sides */
+.container {
+  background-color: #FFF;
+  margin: 42px;
+  padding: 15px 30px 15px 30px;
+  border: 1px solid #DFDFDF;
+  width: 1040px;
+}
+
+.row {
+  clear: both;
+  padding: none;
+}
+
+/* attribute wildcard - looks for anything containing a span-n class*/
+[class*="span-"] {
+  display: block;
+  float: left;
+  padding: none; 
+}
+.group:before,
+.group:after {
+  content: " ";
+  display: table;
+}
+.group:after {
+  clear: both;
+}
+/*  
+Defining col width on a 980 with 15px margin each side, only necessary
+spans for now.
+*/
+.span-full {
+  width: 100%;
+}
+.span-75 {
+  width: 75%;
+}
+.span-70 {
+  width: 70.387755%;
+}
+.span-60 {
+  width: 61.224489795%;
+}
+.span-30 {
+  width: 29.612245%;
+}
+.span-25 {
+  width: 24.612245%;
+}
+.span-15 {
+  width: 14.489795918%;
+}
+/* Other page elements */
+
+.content-box {
+  margin-top: 30px;
+  border-bottom: 1px solid #DFDFDF;
+  margin-right: 30px;
+}
+
+.content-box h2 {
+  color: #5A7A9B;
+  font-size: 24px;
+  margin-bottom: 0px;
+  padding-bottom: 5px;
+  margin-top: 0px;
+  font-weight: 700;
+}
+
+.content-box span {
+  font-size: 11px;
+}
+
+.content-box p {
+  font-size: 14px;
+  color: #5A7A9B;
+}
+
+.right-column {
+  border-left: 1px solid #DFDFDF;
+  padding-left: 30px;
+  margin-top: 30px;
+}
+
+.no-borders {
+  border: none;
+}
+
+.border-bottom {
+  border-bottom: 1px solid #DFDFDF;
+}
+
+.padding-top-bottom {
+  padding: 2px 2px;
+}

@@ -1,0 +1,282 @@
+/* Font import */
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,300);
+
+/* resets */
+fieldset {
+    border: none;
+    margin: 0px;
+    padding: 0px;
+}
+
+/* include the legend for accessibility only */
+legend {
+    display: none;
+}
+
+/* Input restyling */
+input[type="text"] {
+    height: 30px;
+    border-radius: 4px;
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    background-color: #EEE;
+    border-top: 1px solid #CCC;
+    border-right: 1px solid #CCC;
+    border-bottom: 1px solid #FFF;
+    border-left: 1px solid #FFF;
+    outline: none;
+    font-size: 16px;
+    margin-bottom: 10px;
+    padding-left: 10px;
+}
+
+select {
+    margin-bottom: 20px;
+}
+
+/* For elements needing IE8 support */
+section {
+    display: block;
+}
+
+/* border-box set for all elements and pseudo elements */
+*, *:after, *:before {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    background-color: #F6F6F6;
+    line-height: line-height: 1.428571429;  /* borrowed this value from bootstrap */
+    color: #555;
+}
+
+header {
+    background-color: #3d6fc3;
+    margin-left: -20px;
+    border-radius: 4px 4px 0 0;
+    -moz-border-radius: 4px 4px 0 0;
+    -webkit-border-radius: 4px 4px 0 0px;
+    padding: 10px 10px 10px 20px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #264d8d;
+}
+
+header h1 {
+    color: #FFF;
+    margin: 0px;
+}
+
+form {
+    margin-bottom: 20px;
+}
+
+.error-field {
+  border: 1px solid red !important;
+}
+
+.error-alert span {
+  color: #FFF;
+  display: inline-block;
+  background-color: red;
+  margin: 2px;
+  padding: 4px;
+  border-radius: 2px;
+  -moz-border-radius: 2px;
+  -webkit-border-radius: 2px;
+}
+
+/* change the default button styling (borrowed from bootstrap) */
+.btn {
+  display: inline-block;
+  padding: 6px 12px;
+  margin-bottom: 0;
+  margin-left: 0;
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 1.428571429;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  cursor: pointer;
+  background-image: none;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+}
+.btn:focus {
+  outline: thin dotted #333;
+  outline: 5px auto -webkit-focus-ring-color;
+  outline-offset: -2px;
+}
+.btn:hover,
+.btn:focus {
+  color: #333333;
+  text-decoration: none;
+}
+.btn:active,
+.btn.active {
+  background-image: none;
+  outline: 0;
+  -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+  box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+}
+.btn-default {
+  color: #333333;
+  background-color: #ffffff;
+  border-color: #cccccc;
+}
+.btn-default:hover,
+.btn-default:focus,
+.btn-default:active,
+.btn-default.active,
+.open .dropdown-toggle.btn-default {
+  color: #333333;
+  background-color: #ebebeb;
+  border-color: #adadad;
+}
+.btn-default:active,
+.btn-default.active,
+.open .dropdown-toggle.btn-default {
+  background-image: none;
+}
+
+.container {
+    border: 1px solid #DFDFDF;
+    width: 980px;
+    padding-left: 20px;
+    padding-bottom: 20px;
+    margin: 0 auto;
+    background-color: #FFF;
+    border-radius: 4px;
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+}
+
+/* parent form container */
+#address-form {
+    width: 100%;
+}
+
+#address-form fieldset {
+    width: 60%
+}
+
+/* Form elements grouped together */
+.form-group {
+    /*clear: both;*/
+}
+
+.form-group-inline {
+    float: left;
+    width: 50%;
+    padding-right: 20px;
+}
+.form-group :last-child {
+    padding-right: 0px;
+}
+
+.form-group-inline select {
+    display: block;
+}
+
+.form-group input {
+    width: 100%;
+}
+
+.clearfix:before,
+.clearfix:after {
+    content: " ";
+    display: table;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+.clear {
+    clear: both;
+}
+
+#map-canvas {
+  height: 300px;
+  margin: 0px;
+  padding: 0px;
+  width: 60%;
+}
+
+/* media queries for a responsive touch */
+
+/* knock the form elements out of float */
+@media (min-width: 769px) and (max-width: 1040px) {
+    .form-group {
+        float: none;
+    }
+
+    .container {
+        width: 740px;
+    }
+
+}
+
+@media (min-width: 361px) and (max-width: 768px) {
+    .form-group {
+        float: none;
+    }
+
+    .container {
+        width: 340px;
+    }
+
+    .form-group-inline {
+        width: 100%;
+        float: none;
+        padding-right: 0px;
+    }
+
+    #address-form fieldset {
+        width: 80%;
+    }
+
+    #map-canvas {
+      height: 300px;
+      margin: 0px;
+      padding: 0px;
+      width: 300px;
+    }
+
+}
+
+@media only screen (min-device-width:320px) and (max-device-width: 480px) {
+  .form-group {
+      float: none;
+  }
+
+  .container {
+      width: 300px;
+  }
+
+  .form-group-inline {
+      width: 100%;
+      float: none;
+      padding-right: 0px;
+  }
+
+  #address-form fieldset {
+      width: 80%;
+  }
+
+  #map-canvas {
+    height: 300px;
+    margin: 0px;
+    padding: 0px;
+    width: 300px;
+  }
+}
